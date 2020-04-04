@@ -1,1 +1,12 @@
 parameters:
+    level: 6
+    paths:
+        - src
+    autoload_files:
+    autoload_directories:
+        - %rootDir%/..
+    ignoreErrors:
+
+includes:
+    - vendor/phpstan/phpstan-nette/extension.neon
+    - vendor/phpstan/phpstan-nette/rules.neon
