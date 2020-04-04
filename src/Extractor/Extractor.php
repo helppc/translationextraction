@@ -36,7 +36,7 @@ abstract class Extractor implements IExtractor
      * @var string[]
      */
     protected array $comments = [];
-    private ?LoggerInterface $logFile = NULL;
+    private ?LoggerInterface $logger = NULL;
     /**
      * @var array<string,IFilter>
      */
@@ -46,10 +46,10 @@ abstract class Extractor implements IExtractor
      */
     protected array $data = [];
 
-    public function __construct(?LoggerInterface $logFile = NULL)
+    public function __construct(?LoggerInterface $logger = NULL)
     {
 
-        $this->logFile = $logFile;
+        $this->logger = $logger;
         // Clean up...
         $this->removeAllFilters();
         // Set basic filters
@@ -150,8 +150,8 @@ abstract class Extractor implements IExtractor
 
     protected function log(string $message): void
     {
-        if ($this->logFile instanceof LoggerInterface) {
-            $this->logFile->debug($message);
+        if ($this->logger instanceof LoggerInterface) {
+            $this->logger->debug($message);
         }
         if (is_callable($this->logCallback)) {
             call_user_func($this->logCallback, $message);

@@ -2,7 +2,7 @@
 
 namespace HelpPC\TranslationExtraction\DI;
 
-use Contributte\Translation\Exceptions\InvalidArgument;
+use HelpPC\TranslationExtraction\Exceptions\InvalidArgument;
 use HelpPC\TranslationExtraction\Command\CompleteCommand;
 use HelpPC\TranslationExtraction\Command\ExtractCommand;
 use HelpPC\TranslationExtraction\Command\MergeCommand;

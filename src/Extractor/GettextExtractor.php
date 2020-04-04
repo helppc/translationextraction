@@ -10,7 +10,7 @@ class GettextExtractor extends Extractor
 {
     private const ESCAPE_CHARS = '"\\';
 
-    public function __construct(?LoggerInterface $logFile = NULL)
+    public function __construct(?LoggerInterface $logger = NULL)
     {
         $this->addFilter('PHP', new PHPFilter());
         $this->setMeta('POT-Creation-Date', date('c'));
@@ -21,7 +21,7 @@ class GettextExtractor extends Extractor
         $this->setMeta('Content-Transfer-Encoding', '8bit');
         $this->setMeta('Plural-Forms', 'nplurals=INTEGER; plural=EXPRESSION;');
         $this->addComment('Gettext keys exported by GettextExtractor');
-        parent::__construct($logFile);
+        parent::__construct($logger);
     }
 
     /**
