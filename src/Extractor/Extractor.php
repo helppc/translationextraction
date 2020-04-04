@@ -151,6 +151,7 @@ abstract class Extractor implements IExtractor
             ->addFunction('addFilterSelect', 2)
             ->addFunction('addAction', 2)
             ->addFunction('addGroupAction', 1)
+            ->addFunction('addColumnStatus', 2)
             ->addFunction('addColumnNumber', 2)
             ->addFunction('addColumnText', 2)
             ->addFunction('addColumnDateTime', 2)
