@@ -1,0 +1,20 @@
+image: helppc/php74-ci:1.0
+cache:
+  paths:
+    - ./cache/composer
+before_script:
+  - composer config cache-files-dir ./cache/composer
+  - composer config gitlab-token.gitlab.com ${GL_TOKEN}
+  - composer install --no-progress --no-suggest
+
+stages:
+  - test
+
+phpstan:
+  only:
+    - merge_requests
+    - pipelines
+    - pushes
+  stage: test
+  script:
+    - vendor/bin/phpstan analyse -c phpstan.neon --memory-limit=1024M

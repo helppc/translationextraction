@@ -1,0 +1,39 @@
+{
+  "name": "helppc/translation-extraction",
+  "homepage": "http://tirus.cz",
+  "description": "",
+  "keywords": [
+    "nette",
+    "translation",
+    "neon",
+    "gettext"
+  ],
+  "type": "library",
+  "authors": [
+    {
+      "name": "Tomas Kulhanek",
+      "homepage": "https://tirus.cz"
+    }
+  ],
+  "config": {
+    "sort-packages": true
+  },
+  "require": {
+    "php": ">=7.2.0",
+    "nette/di": "^3.0",
+    "symfony/console": "^4.2.9",
+    "latte/latte": "^2.5",
+    "nette/utils": "^3.0",
+    "nikic/php-parser": "^4.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "HelpPC\\TranslationExtraction\\": "src"
+    }
+  },
+  "require-dev": {
+    "nette/tester": "^2.3",
+    "phpstan/phpstan": "^0.12",
+    "phpstan/phpstan-nette": "^0.12"
+  }
+}

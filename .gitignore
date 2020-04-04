@@ -1,0 +1,6 @@
+.idea/
+build
+composer.lock
+docks
+vendor
+examples/credentials.php
