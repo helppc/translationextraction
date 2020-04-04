@@ -2,6 +2,7 @@
   "name": "helppc/translation-extraction",
   "homepage": "http://tirus.cz",
   "description": "",
+  "license": "MIT",
   "keywords": [
     "nette",
     "translation",
